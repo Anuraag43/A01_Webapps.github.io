@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
     <html>
        <head>
        <title>Check Your BMI</title>
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
        <link rel='stylesheet' href='sanakkayala.css' />
-
+      
 
         </head>
         <body>
@@ -36,8 +36,8 @@
         </nav>
 
         <h1>Calculate your BMI</h1>
-        <p>Please enter your Height: <input type="text" id="Height"/>
-            <select type="multiple" id="Heightunits">
+        <p>Please enter your Height: <input type="text" id="height"/>
+            <select type="multiple" id="heightunits">
                 <option value = "meters" selected = "selected">Meters</option>
                 <option value = "inches">Pounds</option>
                 </option>
@@ -53,8 +53,11 @@
             </select>
         </p>
 
-        <h3> Value of your BMI is: <span id = "comment">______________</span></h3>
+        <button type = "button" class ="abc" onclick="calculateBMI()">Submit</button>
+
+        <h3> Value of your BMI is: <span id ="output">______________</span></h3>
         <h3> This means : <span id = "comment">_____________</span></h3>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <script src="bmi.js"></script>
     </body>
