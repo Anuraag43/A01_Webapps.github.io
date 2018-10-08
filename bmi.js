@@ -11,20 +11,33 @@ let ht = parseInt(ht1);
 let wt = parseInt(wt1);
 
     
-    if(ht1 === "" || wt1 === "")
+    if(ht1 === "")
     {
-        alert("please enter a value");
-    }else{
+        alert("please enter a value for Height");
+    }
+    else if (wt1 === "")
+    {
+        alert("please enter a value for Weight");
+    }   
 
 // conveting to metric units
 if (htUnits == "inches") height /= 39.3700787;
 if (wtUnits == "lb") weight /= 2.20462;
 
-//calcultion
-let BMI = Math.round(wt / Math.pow(ht,2)*10000);
+//calculation
+height = ht * ht;
+bmi = wt/height
+
+final_bmi = Math.floor(bmi)
+dif = bmi - final_bmi;
+dif = dif * 10;
+
+
+
+ 
 
 //display result
-document.getElementById("output").innerHTML = Math.round(BMI * 100) /100;
+document.getElementById("output").innerHTML =bmi;
 
 let output = Math.round(BMI * 100)/100
 if(output < 18.5)
@@ -37,6 +50,5 @@ else if(output > 30)
     document.getElementById("comment").innerHTML = "Overweight"
 
 
-    }
-
+    
 }
